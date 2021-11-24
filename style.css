@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+:root {
+    --primary-color: hsl(0, 36%, 70%);
+    --secondary-color: hsl(0, 93%, 68%);
+    --dark-color: hsl(0, 6%, 24%);      
+    --gradient-color: linear-gradient(135deg, hsl(0, 0% , 100%), hsl(0, 100% ,98%));
+    --gradientt-color: linear-gradient(135deg, hsl(0, 80% , 86%), hsl(0, 74% ,74%));;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
+    background-image: linear-gradient(135deg, hsl(0, 0% , 100%), hsl(0, 100% ,98%));
+}
+
+
+h1 {
+    font-size: 5rem;
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+    letter-spacing: 10px;
+    color: var(--primary-color);
+}
+
+p {
+    line-height: 1.9rem;
+    margin: 10px 0 30px 0;
+    color: var(--primary-color);
+    max-width: 400px;
+}
+
+span {
+    color: var(--dark-color);
+    font-weight: 600;
+}
+
+/*Left Side*/
+
+.left {
+    z-index: 999;
+    background-image: url("/images/bg-pattern-desktop.svg");
+    width: 60%;
+}
+
+.inner-flex {
+    max-width: 450px;
+    padding-left: 100px;
+}
+
+.logo {
+    padding: 50px 0 125px 100px;
+}
+.mobile-bg {
+    display: none;
+}
+
+form {
+    position: relative;
+    max-width: 400px;
+}
+
+form.error input{
+    border: 2px solid var(--secondary-color);
+}
+
+input {
+    border: 0.5px solid var(--primary-color);
+    border-radius: 50px;
+    padding: 15px;
+    width: 100%;
+    height: 48px;
+}
+
+input:focus {
+    outline: none;
+    border-width: 3px;
+}
+
+.btn {
+    
+    padding: 15px;
+    width: 100px;
+    cursor: pointer;
+    box-shadow: 2px 5px 300px var(--gradientt-color);
+    background: var(--gradientt-color);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 48px;
+}
+
+.alert {
+    display: none;
+    position: absolute;
+    top: 12px;
+    right: 110px;
+    
+}
+
+.btn:hover {
+    transform: scale(0.98);
+    opacity: 0.7;
+}
+
+small { 
+    display: none;
+    margin: 10px;
+    color: hsl(0, 93%, 68%);
+}
+
+form.error .alert{
+    display: block;
+}
+
+form.error small {
+    display: block;
+}
+
+/* Right Side */
+.right {
+    width: 40%;
+    background-image: url("/images/hero-desktop.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+/* Media */
+
+@media screen and (max-width: 500px) {
+    .mobile-bg {
+        display: block;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+        font-weight: 300;
+        line-height: 1.2;
+        margin: 10px 0;
+        letter-spacing: 10px;
+        color: var(--primary-color);
+    }
+    
+    p {
+        line-height: 1.4rem;
+        margin: 10px 0 30px 0;
+        color: var(--primary-color);
+        max-width: 400px;
+    }
+
+    .inner-flex {
+        padding: 30px;
+        text-align: center;
+    }
+
+    .logo {
+        padding: 20px 20px;
+    }
+
+    .left {
+        width: 100%;
+    }
+    .right {
+        display: none;
+    }
+}
+
+
+/*-------------------------------------------------Global--------------------------------------------------*/
+.flex {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/*Margin*/
+
+.my-1 {
+    margin: 1rem 0;
+}
+
+.my-2 {
+    margin: 1.5rem 0;
+}
+
+.my-3 {
+    margin: 2rem 0;
+}
+
+.my-4 {
+    margin: 3rem 0;
+}
+
+.my-5 {
+    margin: 4rem 0;
+}
+
+.m-1 {
+    margin: 1rem;
+}
+
+.m-2 {
+    margin: 1.5rem;
+}
+
+.m-3 {
+    margin: 2rem;
+}
+
+.m-4 {
+    margin: 3rem;
+}
+
+.m-5 {
+    margin: 4rem;
+}
+
+/*Padding*/
+
+.py-1 {
+    padding: 1rem 0;
+}
+
+.py-2 {
+    padding: 1.5rem 0;
+}
+
+.py-3 {
+    padding: 2rem 0;
+}
+
+.py-4 {
+    padding: 3rem 0;
+}
+
+.py-5 {
+    padding: 4rem 0;
+}
+
+.p-1 {
+    padding: 1rem;
+}
+
+.p-2 {
+    padding: 1.5rem;
+}
+
+.p-3 {
+    padding: 2rem;
+}
+
+.p-4 {
+    padding: 3rem;
+}
+
+.p-5 {
+    padding: 4rem;
+}
+
+/* Text sizes */
+.lead {
+    font-size: 20px;
+}
+
+.sm {
+    font-size: 1rem;
+}
+
+.md {
+    font-size: 2rem;
+}
+
+.lg {
+    font-size: 3rem;
+}
+
+.xl {
+    font-size: 4rem;
+}
+
+.text-center {
+    text-align: center;
+}
